@@ -1,0 +1,26 @@
+@media screen and (max-width:375px) {
+  .side-nav{
+    @apply absolute top-0 z-10 w-full flex flex-col h-[100vh] bg-[#000000b0];
+  
+    .side-bar{
+      transition-duration: 1s;
+      @apply w-[70%] h-full bg-white p-[1rem] flex flex-col gap-[2rem];
+      
+      img{
+        @apply w-4
+      }
+  
+      .links li{
+        font-weight: 600;
+        @apply mb-[1rem];
+      }
+    }
+  }
+  
+  .open{
+    .side-bar{
+      transition-duration: 1s;
+      @apply -translate-x-[100%]
+    }
+  }
+}

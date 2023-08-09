@@ -1,0 +1,85 @@
+<div class="itemd">
+  <div class="image-dis">
+    <img
+      src="/assets/images/icon-previous.svg"
+      alt=""
+      class="pre"
+      (click)="pre()"
+    />
+    <img
+      src="/assets/images/icon-next.svg"
+      alt=""
+      class="next"
+      (click)="next()"
+    />
+    <img
+      [src]="Item.pictures[chosen]"
+      alt=""
+      class="image"
+      (click)="setVisible()"
+    />
+    <div class="small-images">
+      <img
+        src="../../../assets/images/image-product-1-thumbnail.jpg"
+        alt=""
+        [class]="chosen == 0 ? selected : null"
+        (click)="setImage(0)"
+      />
+      <img
+        src="../../../assets/images/image-product-2-thumbnail.jpg"
+        alt=""
+        [class]="chosen == 1 ? selected : null"
+        (click)="setImage(1)"
+      />
+      <img
+        src="../../../assets/images/image-product-3-thumbnail.jpg"
+        alt=""
+        [class]="chosen == 2 ? selected : null"
+        (click)="setImage(2)"
+      />
+      <img
+        src="../../../assets/images/image-product-4-thumbnail.jpg"
+        alt=""
+        [class]="chosen == 3 ? selected : null"
+        (click)="setImage(3)"
+      />
+    </div>
+  </div>
+
+  <div class="text-dis">
+    <div class="itemd-headline">
+      <h5 class="itemd-small-title">{{ Item.headline }}</h5>
+      <h1 class="itemd-title">{{ Item.title }}</h1>
+    </div>
+    <p class="note">
+      {{ Item.note }}
+    </p>
+
+    <div class="price">
+      <div class="main-price">
+        <h1>{{ Item.price | currency }}</h1>
+        <p>{{ Item.reduction }}%</p>
+      </div>
+      <p class="discount">
+        <s>{{ Item.oldprice | currency }}</s>
+      </p>
+    </div>
+
+    <div class="ditail-bottom">
+      <div class="quantity">
+        <div class="minus" (click)="sub()">
+          <img src="../../../assets/images/icon-minus.svg" alt="" />
+        </div>
+        <p>{{ quantity }}</p>
+        <div class="plus" (click)="add()">
+          <img src="../../../assets/images/icon-plus.svg" alt="" />
+        </div>
+      </div>
+
+      <button type="button" class="add-btn" (click)="send()">
+        <img src="../../../assets/images/icon-cart.svg" alt="" />
+        <p>Add to cart</p>
+      </button>
+    </div>
+  </div>
+</div>

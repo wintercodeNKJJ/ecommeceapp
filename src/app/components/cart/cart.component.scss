@@ -1,0 +1,66 @@
+// Chart begin
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#cart{
+  @apply flex flex-col items-start rounded-lg shadow-lg w-[320px] absolute right-[10%] top-[6rem] bg-white;
+  
+  .cart-title{
+    border-bottom:solid 1px #d3d3d3b3;
+    @apply p-4 w-full;
+    h1{
+      font-weight: 600;
+    }
+  }
+  .cart-body{
+    @apply flex flex-col justify-center items-center min-w-[320px] min-h-[150px] p-4;
+
+    .cart-item{
+      @apply flex flex-col justify-between w-full mb-4;
+
+      .cart-info{
+        @apply flex h-[60px] justify-between items-center;
+
+        .product-thum{
+          @apply flex flex-col gap-4 h-[45px] rounded-sm;
+        }
+
+        .price{
+          @apply flex gap-4;
+        }
+
+        .cart-note{
+          font-size: 14px;
+          p{
+            @apply flex gap-2;
+            color: rgb(160, 158, 158)
+          }
+        }
+
+        .bin{
+          height: 15px;
+          cursor: pointer;
+        }
+
+      }
+      
+    }
+    .cart-button{
+      cursor: pointer;
+      @apply rounded-md bg-[#FF7D1B] text-white py-[10px] w-full;
+    }
+  }
+}
+
+// Chart end
+
+@media screen and (max-width:375px) {
+  #cart{
+    @apply z-10 top-[3.5rem] w-[96%] left-[2%] right-[2%];
+
+    .cart-body{
+      @apply w-full;
+    }
+  }
+}

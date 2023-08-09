@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-display: swap;
+  font-family: 'comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/comfortaa-v40-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'convergence';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/convergence-v15-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/anton-v23-latin-regular.woff2') format('woff2');
+}
+
+body{
+  position: relative;
+  font-family: convergence;
+  font-size: 1rem;
+  @apply w-full justify-center items-center h-[100vh]
+}
+
+// main content begin
+
+main{
+  @apply mx-[17%] min-w-[800px]
+}
+
+// main content end
+
+@media screen and (max-width:375px) {
+  main{
+    @apply mx-0 w-full min-w-0 relative;
+  }
+}

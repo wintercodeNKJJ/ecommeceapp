@@ -1,0 +1,55 @@
+<div class="item-picture" *ngIf="show">
+  <div class="item-content">
+    <div class="close-btn">
+      <img
+        src="../../../assets/images/icon-close.svg"
+        alt=""
+        class="close"
+        (click)="closeView()"
+      />
+    </div>
+    <div class="display">
+      <div class="picture">
+        <img
+          src="../../../assets/images/icon-previous.svg"
+          alt=""
+          class="left"
+          (click)="pre()"
+        />
+        <img [src]="Item.pictures[choosen]" alt="" class="main-pic" />
+        <img
+          src="../../../assets/images/icon-next.svg"
+          alt=""
+          class="right"
+          (click)="next()"
+        />
+      </div>
+      <div class="smpics">
+        <img
+          src="../../../assets/images/image-product-1-thumbnail.jpg"
+          alt=""
+          [class]="choosen == 0 ? selected : null"
+          (click)="setImage(0)"
+        />
+        <img
+          src="../../../assets/images/image-product-2-thumbnail.jpg"
+          alt=""
+          [class]="choosen == 1 ? selected : null"
+          (click)="setImage(1)"
+        />
+        <img
+          src="../../../assets/images/image-product-3-thumbnail.jpg"
+          alt=""
+          [class]="choosen == 2 ? selected : null"
+          (click)="setImage(2)"
+        />
+        <img
+          src="../../../assets/images/image-product-4-thumbnail.jpg"
+          alt=""
+          [class]="choosen == 3 ? selected : null"
+          (click)="setImage(3)"
+        />
+      </div>
+    </div>
+  </div>
+</div>

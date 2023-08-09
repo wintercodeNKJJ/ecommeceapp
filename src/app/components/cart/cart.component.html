@@ -1,0 +1,33 @@
+<div id="cart" *ngIf="visible">
+  <div class="cart-title">
+    <h1>Cart</h1>
+  </div>
+  <div class="cart-body">
+    <h1 *ngIf="cartItems.length < 1">Your cart is empty</h1>
+    <div class="cart-item" *ngFor="let item of cartItems">
+      <div class="cart-info">
+        <img
+          src="../../../assets/images/image-product-1-thumbnail.jpg"
+          alt=""
+          class="product-thum"
+        />
+        <div class="cart-note">
+          <p>{{ item.Item.title }}</p>
+          <div class="price">
+            <p>{{ item.Item.price | currency }} x {{ item.cnt }}</p>
+            <strong> {{ item.Item.price * item.cnt | currency }}</strong>
+          </div>
+        </div>
+        <img
+          src="../../../assets/images/icon-delete.svg"
+          alt=""
+          class="bin"
+          (click)="remove(item.Item.id)"
+        />
+      </div>
+    </div>
+    <button type="button" class="cart-button" *ngIf="cartItems.length > 0">
+      Checkout
+    </button>
+  </div>
+</div>

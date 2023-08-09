@@ -1,0 +1,93 @@
+// navbar begin
+
+nav{
+  @apply flex;
+  .navbar{
+    border-bottom:solid 1px #d3d3d3b3;
+    @apply flex w-full mx-auto justify-between items-center h-[100px];
+    
+    .navbar-leftContent{
+      @apply flex gap-[3rem] h-full items-center;
+
+      .menu{
+        cursor: pointer;
+        @apply hidden;
+      }
+
+      .navbar-links{
+        font-size: 15px;
+        @apply flex gap-[1.5rem] h-full;
+
+        a{
+          @apply h-full flex justify-center items-center;
+        }
+
+        a:hover{
+          border-bottom: solid 4px #FF7D1B;
+        }
+      }
+    }
+    .navbar-RightContent{
+      @apply flex gap-[2rem] h-[3rem] items-center;
+      
+      img{
+        cursor: pointer;
+      }
+
+      img:nth-child(1){
+        @apply h-4;
+      }
+      
+      img:nth-child(2){
+        @apply h-10
+      }
+
+      img:nth-child(2):hover{
+        @apply rounded-full border-2 border-[#FF7D1B]
+      }
+    }
+  }
+}
+
+@media screen and (max-width:375px) {
+  nav{
+    @apply w-full h-fit;
+
+    .navbar{
+      @apply h-[50px] px-4;
+
+      .navbar-leftContent{
+        @apply flex gap-[0.7rem] h-full items-center;
+        .menu{
+          @apply pt-[2px] block;
+        }
+      }
+
+      .navbar-leftContent{
+        .navbar-links{
+          @apply hidden
+        }
+      }
+
+      .navbar-RightContent{
+        @apply flex gap-[1rem] h-[3rem] items-center;
+        
+        img{
+          cursor: pointer;
+        }
+  
+        img:nth-child(1){
+          @apply h-4;
+        }
+        
+        img:nth-child(2){
+          @apply h-6
+        }
+  
+        img:nth-child(2):hover{
+          @apply rounded-full border-2 border-[#FF7D1B]
+        }
+      }
+    }
+  }
+}
