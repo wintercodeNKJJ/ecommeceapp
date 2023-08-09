@@ -17,11 +17,16 @@
       </ul>
     </div>
     <div class="navbar-RightContent">
-      <img
-        src="/assets/images/icon-cart.svg"
-        alt="chart"
-        (click)="setVisible()"
-      />
+      <div class="cart-b">
+        <img
+          src="/assets/images/icon-cart.svg"
+          alt="chart"
+          (click)="setVisible()"
+        />
+        <div class="count" *ngIf="cnt > 0">
+          <p>{{ cnt }}</p>
+        </div>
+      </div>
       <img src="/assets/images/image-avatar.png" alt="me" />
     </div>
   </div>

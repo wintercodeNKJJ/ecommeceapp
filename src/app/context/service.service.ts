@@ -43,7 +43,14 @@ export class ServiceService {
 
   public cartItems:Array<{Item:Item,cnt:number}> = []
   public addTochart(data:Item,quantity:number):void{
-    this.cartItems.push({Item:data,cnt:quantity});
+    if(this.cartItems.length > 0){
+      let index = this.cartItems.findIndex(x => x.Item.id == data.id)
+      if(index != -1){
+        this.cartItems[index].cnt += quantity; 
+      }
+    }else{
+      this.cartItems.push({Item:data,cnt:quantity});
+    }
   }
 
   public removeFromChart(i:number){

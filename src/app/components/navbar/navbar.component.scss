@@ -30,6 +30,13 @@ nav{
     .navbar-RightContent{
       @apply flex gap-[2rem] h-[3rem] items-center;
       
+      .cart-b{
+        @apply relative;
+        .count{
+          font-size: 10px;
+          @apply absolute -top-[50%] -right-[50%] px-1 max-w-[1.5rem] h-3 bg-[#FF7D1B] text-white rounded-full text-center;
+        }
+      }
       img{
         cursor: pointer;
       }
