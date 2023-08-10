@@ -18,11 +18,11 @@ nav{
         font-size: 15px;
         @apply flex gap-[1.5rem] h-full;
 
-        a{
+        li{
           @apply h-full flex justify-center items-center;
         }
 
-        a:hover{
+        li:hover{
           border-bottom: solid 4px #FF7D1B;
         }
       }
