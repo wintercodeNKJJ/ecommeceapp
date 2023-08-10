@@ -27,9 +27,14 @@
   src: url('./assets/fonts/anton-v23-latin-regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: Kumbh-Sans;
+  src: url('./assets/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf');
+}
+
 body{
   position: relative;
-  font-family: convergence;
+  font-family: Kumbh-Sans;
   font-size: 1rem;
   @apply w-full justify-center items-center h-[100vh]
 }
