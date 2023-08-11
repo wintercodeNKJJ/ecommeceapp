@@ -21,11 +21,11 @@ export class ItemDitailsComponent implements OnInit {
   }
 
   add(): void{
-    this.quantity++
+   this.quantity++
   }
 
   sub(): void{
-    this.quantity--
+    if(this.quantity > 1) {this.quantity--}
   }
 
   setImage(i:number){
